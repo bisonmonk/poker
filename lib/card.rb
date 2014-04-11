@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class Card
   SUIT_STRINGS = {
     :clubs    => "♣",
@@ -24,15 +26,15 @@ class Card
 
   attr_reader :suit
 
-  def self.suits
+  def suits
     SUIT_STRINGS.keys
   end #self.suits
 
-  def self.values
+  def values
     VALUE_STRINGS.keys
   end #self.values
 
-  def initialize(suit)
+  def initialize(suit=:clubs, value=:deuce)
     @suit, @value = suit, value
   end #init
 
