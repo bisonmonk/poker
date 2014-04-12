@@ -34,6 +34,16 @@ describe Deck do
     end
   end
 
-  describe
+  describe "#take" do
+    it "returns an array of items minus the " do
+      expect(deck.take(2).count).to eq(2)
+    end
+  end #take
+
+  describe "#shuffle" do
+    it "returns a shuffled array" do
+      expect(deck).to_not eq(deck.shuffle)
+    end
+  end
 
 end #Deck

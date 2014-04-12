@@ -38,7 +38,15 @@ class Card
     @suit, @value = suit, value
   end #init
 
+  def value_to_s
+    VALUE_STRINGS[value]
+  end
+
+  def suit_to_s
+    SUIT_STRINGS[suit]
+  end
+
   def to_s
-    VALUE_STRINGS[value] + SUIT_STRINGS[suit]
+    value_to_s + suit_to_s
   end #to_s
 end #Card
